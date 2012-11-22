@@ -1,4 +1,4 @@
-package com.cpusage.be;
+package com.cpusage.gridvid.be;
 
 /**
  * This program is free software. It comes without any warranty, to
@@ -8,15 +8,16 @@ package com.cpusage.be;
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  * 
  * @author gumatias <gustavo@ownits.com>
- * 
+ *
  */
-public enum AudioCodec {
+public enum ThumbnailFormat {
 
-	AAC("aac"), AC3("ac3"), MP3("mp3"), WMA("wma"), VORBIS("vorbis");
-
+	JPG ("jpg"),
+	PNG ("png");
+	
 	private String mValue;
-
-	private AudioCodec(String pValue) {
+	
+	private ThumbnailFormat(String pValue) {
 		mValue = pValue;
 	}
 
@@ -24,11 +25,11 @@ public enum AudioCodec {
 		return mValue;
 	}
 	
-	public static AudioCodec fromValue(String pValue) {
-		for (AudioCodec c : AudioCodec.values()) {
-			if (c.getValue().equalsIgnoreCase(pValue)) return c;
+	public static ThumbnailFormat fromValue(String pValue) {
+		for (ThumbnailFormat f : ThumbnailFormat.values()) {
+			if (f.getValue().equalsIgnoreCase(pValue)) return f;
 		}
 		return null;
 	}
-
+	
 }

@@ -1,4 +1,4 @@
-package com.cpusage.be;
+package com.cpusage.gridvid.be;
 
 import com.google.gson.annotations.SerializedName;
 

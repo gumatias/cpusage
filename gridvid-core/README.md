@@ -9,7 +9,7 @@ should be contacted to the developer only.
 
 ## Limitations ##
 
-Gridvid Core is created solely for the aim of simplifying the serialization/ 
+Gridvid Core is created solely for the aim of simplifying the serialization/
 deserialization of Gridvid's encoding requests, and not the interactions.
 
 Hence, do note that Gridvid Core is not a 100% complete wrapper for Gridvid 

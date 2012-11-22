@@ -1,4 +1,4 @@
-package com.cpusage.be;
+package com.cpusage.gridvid.be;
 
 import java.util.Properties;
 
@@ -7,6 +7,7 @@ import static junit.framework.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.cpusage.gridvid.be.EncodingRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
