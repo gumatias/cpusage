@@ -1,4 +1,5 @@
 /target
+/.gitignore
 .DS_Store
 .classpath
 .project
