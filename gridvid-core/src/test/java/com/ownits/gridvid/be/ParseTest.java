@@ -1,4 +1,4 @@
-package com.cpusage.gridvid.be;
+package com.ownits.gridvid.be;
 
 import java.util.Properties;
 
@@ -7,9 +7,9 @@ import static junit.framework.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cpusage.gridvid.be.EncodingRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.ownits.gridvid.be.EncodingRequest;
 
 /**
  * This program is free software. It comes without any warranty, to

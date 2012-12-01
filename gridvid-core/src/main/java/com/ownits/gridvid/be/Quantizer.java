@@ -1,6 +1,4 @@
-package com.cpusage.gridvid.be;
-
-import com.google.gson.annotations.SerializedName;
+package com.ownits.gridvid.be;
 
 /**
  * This program is free software. It comes without any warranty, to
@@ -12,17 +10,6 @@ import com.google.gson.annotations.SerializedName;
  * @author gumatias <gustavo@ownits.com>
  *
  */
-public class OverlayMulti {
+public class Quantizer {
 
-	@SerializedName("filename")
-	private String mFilename;
-
-	public String getFilename() {
-		return mFilename;
-	}
-
-	public void setFilename(String pFilename) {
-		mFilename = pFilename;
-	}
-	
 }

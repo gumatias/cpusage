@@ -1,4 +1,4 @@
-package com.cpusage.gridvid.be;
+package com.ownits.gridvid.be;
 
 /**
  * This program is free software. It comes without any warranty, to

@@ -1,4 +1,6 @@
-package com.cpusage.gridvid.be;
+package com.ownits.gridvid.be;
+
+import com.google.gson.annotations.SerializedName;
 
 /**
  * This program is free software. It comes without any warranty, to
@@ -10,6 +12,17 @@ package com.cpusage.gridvid.be;
  * @author gumatias <gustavo@ownits.com>
  *
  */
-public class Quantizer {
+public class OverlayInput {
 
+	@SerializedName("object")
+	private String mObject;
+
+	public String getObject() {
+		return mObject;
+	}
+
+	public void setObject(String pObject) {
+		mObject = pObject;
+	}
+	
 }

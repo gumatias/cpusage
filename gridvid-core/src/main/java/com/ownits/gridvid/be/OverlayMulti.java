@@ -1,4 +1,4 @@
-package com.cpusage.gridvid.be;
+package com.ownits.gridvid.be;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -12,17 +12,17 @@ import com.google.gson.annotations.SerializedName;
  * @author gumatias <gustavo@ownits.com>
  *
  */
-public class OverlayInput {
+public class OverlayMulti {
 
-	@SerializedName("object")
-	private String mObject;
+	@SerializedName("filename")
+	private String mFilename;
 
-	public String getObject() {
-		return mObject;
+	public String getFilename() {
+		return mFilename;
 	}
 
-	public void setObject(String pObject) {
-		mObject = pObject;
+	public void setFilename(String pFilename) {
+		mFilename = pFilename;
 	}
 	
 }

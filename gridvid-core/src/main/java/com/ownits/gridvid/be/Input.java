@@ -1,4 +1,4 @@
-package com.cpusage.gridvid.be;
+package com.ownits.gridvid.be;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * @author gumatias <gustavo@ownits.com>
  *
  */
-public class Output {
+public class Input {
 
 	@SerializedName("key")
 	private String mKey;
