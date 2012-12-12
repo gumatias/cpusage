@@ -53,6 +53,19 @@ public class ParseTest {
 		assertNotNull(oEncodingRequest.getOutput().getObject());
 		assertNotNull(oEncodingRequest.getTemplate());
 		
+		assertEquals("CUSTOMER_KEY", oEncodingRequest.getKey());
+		assertEquals("CUSTOMER_SECRET", oEncodingRequest.getSecret());
+		assertEquals("amazon_bucket_in", oEncodingRequest.getInput().getBucket());
+		assertEquals("AMAZON_KEY", oEncodingRequest.getInput().getKey());
+		assertEquals("input_video.avi", oEncodingRequest.getInput().getObject());
+		assertEquals("AMAZON_SECRET", oEncodingRequest.getInput().getSecret());
+		assertEquals("AMAZON_KEY", oEncodingRequest.getOutput().getKey());
+		assertEquals("AMAZON_SECRET", oEncodingRequest.getOutput().getSecret());
+		assertEquals("amazon_bucket_out", oEncodingRequest.getOutput().getBucket());
+		assertEquals("output_video.m4v", oEncodingRequest.getOutput().getObject());
+		assertEquals("ipod_small_widescreen", oEncodingRequest.getTemplate());
+		
+		
 		String oJson = mGson.toJson(oEncodingRequest);
 		assertNotNull(oJson);
 	}
@@ -83,6 +96,23 @@ public class ParseTest {
 		assertNotNull(oEncodingRequest.getVideo().getAdvanced().getAspect());
 		assertNotNull(oEncodingRequest.getVideo().getAdvanced().getVF());
 		assertNotNull(oEncodingRequest.getVideo().getAdvanced().getSubq());
+		
+		assertEquals("CUSTOMER_KEY", oEncodingRequest.getKey());
+		assertEquals("CUSTOMER_SECRET", oEncodingRequest.getSecret());
+		assertEquals("AMAZON_KEY", oEncodingRequest.getInput().getKey());
+		assertEquals("AMAZON_SECRET", oEncodingRequest.getInput().getSecret());
+		assertEquals("amazon_bucket_in", oEncodingRequest.getInput().getBucket());
+		assertEquals("input_video.avi", oEncodingRequest.getInput().getObject());
+		assertEquals("AMAZON_SECRET", oEncodingRequest.getOutput().getSecret());
+		assertEquals("amazon_bucket_out", oEncodingRequest.getOutput().getBucket());
+		assertEquals("output_video.m4v", oEncodingRequest.getOutput().getObject());
+		assertEquals(AudioCodec.MP3, oEncodingRequest.getAudio().getCodec());
+		assertEquals(VideoCodec.X264, oEncodingRequest.getVideo().getCodec());
+		assertEquals("250k", oEncodingRequest.getVideo().getAdvanced().getB());
+		assertEquals("mp4", oEncodingRequest.getVideo().getAdvanced().getF());
+		assertEquals("4:3", oEncodingRequest.getVideo().getAdvanced().getAspect());
+		assertEquals("scale=640:360", oEncodingRequest.getVideo().getAdvanced().getVF());
+		assertEquals(new Integer(7), oEncodingRequest.getVideo().getAdvanced().getSubq());
 		
 		String oJson = mGson.toJson(oEncodingRequest);
 		assertNotNull(oJson);
@@ -146,6 +176,53 @@ public class ParseTest {
 		assertNotNull(oEncodingRequest.getVideo().getAdvanced().getTrellis());
 		assertNotNull(oEncodingRequest.getVideo().getAdvanced().getCmp());
 		
+		assertEquals("CUSTOMER KEY", oEncodingRequest.getKey());
+		assertEquals("CUSTOMER SECRET", oEncodingRequest.getSecret());
+		assertEquals("AMAZON KEY", oEncodingRequest.getInput().getKey());
+		assertEquals("AMAZON SECRET", oEncodingRequest.getInput().getSecret());
+		assertEquals("S3 INPUT BUCKET", oEncodingRequest.getInput().getBucket());
+		assertEquals("input_video.avi", oEncodingRequest.getInput().getObject());
+		assertEquals("AMAZON SECRET", oEncodingRequest.getOutput().getSecret());
+		assertEquals("S3 OUTPUT BUCKET", oEncodingRequest.getOutput().getBucket());
+		assertEquals("output_video.mp4", oEncodingRequest.getOutput().getObject());
+		assertEquals(AudioCodec.AAC, oEncodingRequest.getAudio().getCodec());
+		assertEquals(new Integer(2), oEncodingRequest.getAudio().getAdvanced().getAC());
+		assertEquals("112k", oEncodingRequest.getAudio().getAdvanced().getAB());
+		assertEquals(new Long(48000), oEncodingRequest.getAudio().getAdvanced().getAR());
+		assertEquals(VideoCodec.X264, oEncodingRequest.getVideo().getCodec());
+		assertEquals(new Integer(0), oEncodingRequest.getVideo().getAdvanced().getDeblockalpha());
+		assertEquals("scale=640:480", oEncodingRequest.getVideo().getAdvanced().getVF());
+		assertEquals(new Integer(7), oEncodingRequest.getVideo().getAdvanced().getSubq());
+		assertEquals(new Integer(1), oEncodingRequest.getVideo().getAdvanced().getRefs());
+		assertEquals(new Integer(2), oEncodingRequest.getVideo().getAdvanced().getWpredp());
+		assertEquals(new Integer(10), oEncodingRequest.getVideo().getAdvanced().getQmin());
+		assertEquals("4:3", oEncodingRequest.getVideo().getAdvanced().getAspect());
+		assertEquals("umh", oEncodingRequest.getVideo().getAdvanced().getMeMethod());
+		assertEquals(new Integer(0), oEncodingRequest.getVideo().getAdvanced().getDeblockbeta());
+		assertEquals("4M", oEncodingRequest.getVideo().getAdvanced().getBufsize());
+		assertEquals(new Integer(3), oEncodingRequest.getVideo().getAdvanced().getDirectpred());
+		assertEquals(new Integer(1), oEncodingRequest.getVideo().getAdvanced().getCoder());
+		assertEquals("+bpyramid+mixed_refs+wpred+dct8x8+fastpskip", oEncodingRequest.getVideo().getAdvanced().getFlags2());
+		assertEquals(new Integer(16), oEncodingRequest.getVideo().getAdvanced().getMeRange());
+		assertEquals("1500k", oEncodingRequest.getVideo().getAdvanced().getMaxrate());
+		assertEquals("+parti4x4+parti8x8+partp8x8+partb8x8", oEncodingRequest.getVideo().getAdvanced().getPartitions());
+		assertEquals(new Integer(3), oEncodingRequest.getVideo().getAdvanced().getBF());
+		assertEquals(new Integer(25), oEncodingRequest.getVideo().getAdvanced().getKeyintMin());
+		assertEquals("1250k", oEncodingRequest.getVideo().getAdvanced().getB());
+		assertEquals(new Integer(4), oEncodingRequest.getVideo().getAdvanced().getQdiff());
+		assertEquals(new Integer(250), oEncodingRequest.getVideo().getAdvanced().getG());
+		assertEquals("mp4", oEncodingRequest.getVideo().getAdvanced().getF());
+		assertEquals(new Integer(30), oEncodingRequest.getVideo().getAdvanced().getLevel());
+		assertEquals(new Integer(50), oEncodingRequest.getVideo().getAdvanced().getRcLookahead());
+		assertEquals(new Integer(51), oEncodingRequest.getVideo().getAdvanced().getQmax());
+		assertEquals(new Integer(2), oEncodingRequest.getVideo().getAdvanced().getBStrategy());
+		assertEquals(new Double(0.71), oEncodingRequest.getVideo().getAdvanced().getIQfactor());
+		assertEquals(new Double(29.97), oEncodingRequest.getVideo().getAdvanced().getR());
+		assertEquals("+loop", oEncodingRequest.getVideo().getAdvanced().getFlags());
+		assertEquals(new Integer(40), oEncodingRequest.getVideo().getAdvanced().getScThreshold());
+		assertEquals(new Integer(2), oEncodingRequest.getVideo().getAdvanced().getTrellis());
+		assertEquals("+chroma", oEncodingRequest.getVideo().getAdvanced().getCmp());
+		
 		String oJson = mGson.toJson(oEncodingRequest);
 		assertNotNull(oJson);
 	}
@@ -164,6 +241,14 @@ public class ParseTest {
 		assertNotNull(oEncodingRequest.getThumbnail().getNumber());
 		assertNotNull(oEncodingRequest.getThumbnail().getSize());
 		assertNotNull(oEncodingRequest.getThumbnail().getFormat());
+		
+		assertEquals("AMAZON S3 KEY", oEncodingRequest.getOutput().getKey());
+		assertEquals("AMAZON S3 SECRET", oEncodingRequest.getOutput().getSecret());
+		assertEquals("AmazonBucketName", oEncodingRequest.getOutput().getBucket());
+		assertEquals("OutputDir/OutputFileName.mp4", oEncodingRequest.getOutput().getObject());
+		assertEquals(new Integer(3), oEncodingRequest.getThumbnail().getNumber());
+		assertEquals("640x480", oEncodingRequest.getThumbnail().getSize());
+		assertEquals(ThumbnailFormat.PNG, oEncodingRequest.getThumbnail().getFormat());
 		
 		String oJson = mGson.toJson(oEncodingRequest);
 		assertNotNull(oJson);
