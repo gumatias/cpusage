@@ -40,6 +40,9 @@ public class EncodingRequest {
 	
 	@SerializedName("template")
 	private String mTemplate;
+	
+	@SerializedName("callback")
+	private String mCallback;
 
 	public String getKey() {
 		return mKey;
@@ -111,6 +114,14 @@ public class EncodingRequest {
 
 	public void setTemplate(String pTemplate) {
 		mTemplate = pTemplate;
+	}
+
+	public String getCallback() {
+		return mCallback;
+	}
+
+	public void setCallback(String pCallback) {
+		this.mCallback = pCallback;
 	}
 	
 }

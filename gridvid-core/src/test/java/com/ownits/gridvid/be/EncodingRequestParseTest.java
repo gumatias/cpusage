@@ -21,7 +21,7 @@ import com.ownits.gridvid.be.EncodingRequest;
  * @author gumatias <gustavo@ownits.com>
  *
  */
-public class ParseTest {
+public class EncodingRequestParseTest {
 	
 	private static final String SAMPLE_REQUESTS_PROPERTIES = "sample-requests.properties";
 	
