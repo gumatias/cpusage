@@ -1,5 +1,7 @@
 package com.ownits.gridvid.be;
 
+import java.util.Map;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -14,7 +16,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class EncodingCallbackResponse {
 
-	@SerializedName("job_id")
+	@SerializedName("jobid")
 	private String mJobId;
 	
 	@SerializedName("exit_code")
@@ -25,6 +27,12 @@ public class EncodingCallbackResponse {
 	
 	@SerializedName("total_time")
 	private String mTotalTime;
+	
+	@SerializedName("outputs")
+	private Map<String, Map<String, Map<String, Object>>> mOutputs;
+	
+	@SerializedName("length")
+	private Integer mLength;
 
 	public String getJobId() {
 		return mJobId;
@@ -56,6 +64,22 @@ public class EncodingCallbackResponse {
 
 	public void setTotalTime(String pTotalTime) {
 		mTotalTime = pTotalTime;
+	}
+
+	public Map<String, Map<String, Map<String, Object>>> getOutputs() {
+		return mOutputs;
+	}
+
+	public void setOutputs(Map<String, Map<String, Map<String, Object>>> pOutputs) {
+		mOutputs = pOutputs;
+	}
+
+	public Integer getLength() {
+		return mLength;
+	}
+
+	public void setLength(Integer pLength) {
+		mLength = pLength;
 	}
 	
 }

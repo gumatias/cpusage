@@ -36,7 +36,7 @@ public class EncodingCallbackResponseParseTest {
 	}
 
 	@Test
-	public void shouldParseTest_1() throws Exception {
+	public void shouldParseTest_5() throws Exception {
 		EncodingCallbackResponse oResponse = mGson.fromJson(mSampleRequests.get("5").toString(), EncodingCallbackResponse.class);
 		
 		assertNotNull(oResponse);
@@ -49,6 +49,29 @@ public class EncodingCallbackResponseParseTest {
 		assertEquals(Integer.valueOf(0), oResponse.getExitCode());
 		assertEquals("123", oResponse.getProcTime());
 		assertEquals("321", oResponse.getTotalTime());
+		
+		String oJson = mGson.toJson(oResponse);
+		assertNotNull(oJson);
+	}
+	
+	@Test
+	public void shouldParseTest_6() throws Exception {
+		EncodingCallbackResponse oResponse = mGson.fromJson(mSampleRequests.get("6").toString(), EncodingCallbackResponse.class);
+		
+		assertNotNull(oResponse);
+		assertNotNull(oResponse.getJobId());
+		assertNotNull(oResponse.getExitCode());
+		assertNotNull(oResponse.getLength());
+		assertNotNull(oResponse.getOutputs());
+		assertEquals(1, oResponse.getOutputs().size());
+		assertNotNull(oResponse.getOutputs().get("test.mp4"));
+		assertEquals(3, oResponse.getOutputs().get("test.mp4").size());
+		assertNotNull(oResponse.getOutputs().get("test.mp4").get("file"));
+		assertEquals(4, oResponse.getOutputs().get("test.mp4").get("file").size());
+		assertNotNull(oResponse.getOutputs().get("test.mp4").get("stream_0"));
+		assertEquals(6, oResponse.getOutputs().get("test.mp4").get("stream_0").size());
+		assertNotNull(oResponse.getOutputs().get("test.mp4").get("stream_1"));
+		assertEquals(4, oResponse.getOutputs().get("test.mp4").get("stream_1").size());
 		
 		String oJson = mGson.toJson(oResponse);
 		assertNotNull(oJson);
