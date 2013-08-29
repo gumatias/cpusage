@@ -22,6 +22,9 @@ public class Thumbnail {
 	
 	@SerializedName("format")
 	private String mFormat;
+	
+	@SerializedName("output_name")
+	private String mOutputName;
 
 	public Integer getNumber() {
 		return mNumber;
@@ -46,5 +49,19 @@ public class Thumbnail {
 	public void setFormat(ThumbnailFormat pFormat) {
 		mFormat = pFormat.getValue();
 	}
-	
+
+	public String getOutputName() {
+		return mOutputName;
+	}
+
+	public void setOutputName(String pOutputName) {
+		mOutputName = pOutputName;
+	}
+
+	@Override
+	public String toString() {
+		return "Thumbnail [mNumber=" + mNumber + ", mSize=" + mSize
+				+ ", mFormat=" + mFormat + ", mOutputName=" + mOutputName + "]";
+	}
+
 }

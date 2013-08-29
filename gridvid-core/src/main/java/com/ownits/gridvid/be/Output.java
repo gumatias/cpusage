@@ -57,5 +57,11 @@ public class Output {
 	public void setObject(String pObject) {
 		mObject = pObject;
 	}
+
+	@Override
+	public String toString() {
+		return "Output [mKey=" + mKey + ", mSecret=" + mSecret + ", mBucket="
+				+ mBucket + ", mObject=" + mObject + "]";
+	}
 	
 }

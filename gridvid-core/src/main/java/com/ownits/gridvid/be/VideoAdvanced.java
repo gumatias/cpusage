@@ -388,4 +388,23 @@ public class VideoAdvanced {
 		mCmp = pCmp;
 	}
 
+	@Override
+	public String toString() {
+		return "VideoAdvanced [mDeblockalpha=" + mDeblockalpha + ", mVF=" + mVF
+				+ ", mSubq=" + mSubq + ", mRefs=" + mRefs + ", mWpredp="
+				+ mWpredp + ", mQmin=" + mQmin + ", mAspect=" + mAspect
+				+ ", mMeMethod=" + mMeMethod + ", mDeblockbeta=" + mDeblockbeta
+				+ ", mBufsize=" + mBufsize + ", mDirectpred=" + mDirectpred
+				+ ", mCoder=" + mCoder + ", mFlags2=" + mFlags2 + ", mMeRange="
+				+ mMeRange + ", mMaxrate=" + mMaxrate + ", mPartitions="
+				+ mPartitions + ", mBF=" + mBF + ", mQcomp=" + mQcomp
+				+ ", mBT=" + mBT + ", mKeyintMin=" + mKeyintMin + ", mB=" + mB
+				+ ", mQdiff=" + mQdiff + ", mG=" + mG + ", mF=" + mF
+				+ ", mLevel=" + mLevel + ", mRcLookahead=" + mRcLookahead
+				+ ", mQmax=" + mQmax + ", mBStrategy=" + mBStrategy
+				+ ", mIQfactor=" + mIQfactor + ", mR=" + mR + ", mFlags="
+				+ mFlags + ", mScThreshold=" + mScThreshold + ", mTrellis="
+				+ mTrellis + ", mCmp=" + mCmp + "]";
+	}
+
 }

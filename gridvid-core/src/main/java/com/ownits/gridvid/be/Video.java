@@ -112,5 +112,14 @@ public class Video {
 	public void setHlsStream(HLSStream pHlsStream) {
 		mHlsStream = pHlsStream;
 	}
+
+	@Override
+	public String toString() {
+		return "Video [mCodec=" + mCodec + ", mAdvanced=" + mAdvanced
+				+ ", mBitrate=" + mBitrate + ", mQuantizer=" + mQuantizer
+				+ ", mDisable=" + mDisable + ", mAspectratio=" + mAspectratio
+				+ ", mVF=" + mVF + ", mNoStream=" + mNoStream + ", mHlsStream="
+				+ mHlsStream + "]";
+	}
 	
 }

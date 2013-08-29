@@ -1,15 +1,15 @@
 package com.ownits.gridvid.be;
 
-import java.util.Properties;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNotNull;
 
-import static junit.framework.Assert.*;
+import java.util.Properties;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.ownits.gridvid.be.EncodingRequest;
 
 /**
  * This program is free software. It comes without any warranty, to
@@ -238,6 +238,7 @@ public class EncodingRequestParseTest {
 		assertNotNull(oEncodingRequest.getOutput().getBucket());
 		assertNotNull(oEncodingRequest.getOutput().getObject());
 		assertNotNull(oEncodingRequest.getThumbnail());
+		assertNotNull(oEncodingRequest.getThumbnail().getOutputName());
 		assertNotNull(oEncodingRequest.getThumbnail().getNumber());
 		assertNotNull(oEncodingRequest.getThumbnail().getSize());
 		assertNotNull(oEncodingRequest.getThumbnail().getFormat());
@@ -246,6 +247,7 @@ public class EncodingRequestParseTest {
 		assertEquals("AMAZON S3 SECRET", oEncodingRequest.getOutput().getSecret());
 		assertEquals("AmazonBucketName", oEncodingRequest.getOutput().getBucket());
 		assertEquals("OutputDir/OutputFileName.mp4", oEncodingRequest.getOutput().getObject());
+		assertEquals("file_output_name", oEncodingRequest.getThumbnail().getOutputName());
 		assertEquals(new Integer(3), oEncodingRequest.getThumbnail().getNumber());
 		assertEquals("640x480", oEncodingRequest.getThumbnail().getSize());
 		assertEquals(ThumbnailFormat.PNG, oEncodingRequest.getThumbnail().getFormat());

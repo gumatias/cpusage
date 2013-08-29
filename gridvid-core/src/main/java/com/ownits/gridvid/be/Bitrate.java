@@ -69,4 +69,11 @@ public class Bitrate {
 		mBufsize = pBufsize;
 	}
 
+	@Override
+	public String toString() {
+		return "Bitrate [mRate=" + mRate + ", mTolerance=" + mTolerance
+				+ ", mMaxrate=" + mMaxrate + ", mMinrate=" + mMinrate
+				+ ", mBufsize=" + mBufsize + "]";
+	}
+
 }

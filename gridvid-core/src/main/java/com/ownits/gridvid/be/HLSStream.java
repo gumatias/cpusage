@@ -46,5 +46,11 @@ public class HLSStream {
 	public void setSegmentTime(Integer pSegmentTime) {
 		mSegmentTime = pSegmentTime;
 	}
+
+	@Override
+	public String toString() {
+		return "HLSStream [mFilter=" + mFilter + ", mFormat=" + mFormat
+				+ ", mSegmentTime=" + mSegmentTime + "]";
+	}
 	
 }

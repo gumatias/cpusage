@@ -90,5 +90,13 @@ public class Audio {
 	public void setAdvanced(AudioAdvanced pAdvanced) {
 		mAdvanced = pAdvanced;
 	}
+
+	@Override
+	public String toString() {
+		return "Audio [mCodec=" + mCodec + ", mDisable=" + mDisable
+				+ ", mFrequency=" + mFrequency + ", mBitrate=" + mBitrate
+				+ ", mChannels=" + mChannels + ", mQuality=" + mQuality
+				+ ", mAdvanced=" + mAdvanced + "]";
+	}
 	
 }

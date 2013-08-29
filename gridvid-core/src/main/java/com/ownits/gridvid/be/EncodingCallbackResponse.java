@@ -81,5 +81,13 @@ public class EncodingCallbackResponse {
 	public void setLength(Integer pLength) {
 		mLength = pLength;
 	}
+
+	@Override
+	public String toString() {
+		return "EncodingCallbackResponse [mJobId=" + mJobId + ", mExitCode="
+				+ mExitCode + ", mProcTime=" + mProcTime + ", mTotalTime="
+				+ mTotalTime + ", mOutputs=" + mOutputs + ", mLength="
+				+ mLength + "]";
+	}
 	
 }

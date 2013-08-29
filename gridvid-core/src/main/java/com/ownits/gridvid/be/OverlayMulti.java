@@ -24,5 +24,10 @@ public class OverlayMulti {
 	public void setFilename(String pFilename) {
 		mFilename = pFilename;
 	}
+
+	@Override
+	public String toString() {
+		return "OverlayMulti [mFilename=" + mFilename + "]";
+	}
 	
 }

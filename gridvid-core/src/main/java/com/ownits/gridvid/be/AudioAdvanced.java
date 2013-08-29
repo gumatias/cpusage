@@ -46,5 +46,11 @@ public class AudioAdvanced {
 	public void setAR(Long pAR) {
 		mAR = pAR;
 	}
+
+	@Override
+	public String toString() {
+		return "AudioAdvanced [mAC=" + mAC + ", mAB=" + mAB + ", mAR=" + mAR
+				+ "]";
+	}
 	
 }

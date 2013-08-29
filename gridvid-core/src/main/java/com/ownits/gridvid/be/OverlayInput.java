@@ -24,5 +24,10 @@ public class OverlayInput {
 	public void setObject(String pObject) {
 		mObject = pObject;
 	}
+
+	@Override
+	public String toString() {
+		return "OverlayInput [mObject=" + mObject + "]";
+	}
 	
 }

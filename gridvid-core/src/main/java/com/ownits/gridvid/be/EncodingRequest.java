@@ -123,5 +123,14 @@ public class EncodingRequest {
 	public void setCallback(String pCallback) {
 		this.mCallback = pCallback;
 	}
+
+	@Override
+	public String toString() {
+		return "EncodingRequest [mKey=" + mKey + ", mSecret=" + mSecret
+				+ ", mInput=" + mInput + ", mOutput=" + mOutput + ", mAudio="
+				+ mAudio + ", mVideo=" + mVideo + ", mThumbnail=" + mThumbnail
+				+ ", mOverlay=" + mOverlay + ", mTemplate=" + mTemplate
+				+ ", mCallback=" + mCallback + "]";
+	}
 	
 }

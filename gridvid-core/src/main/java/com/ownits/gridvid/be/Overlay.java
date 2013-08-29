@@ -57,5 +57,11 @@ public class Overlay {
 	public void setMulti(OverlayMulti pMulti) {
 		mMulti = pMulti;
 	}
+
+	@Override
+	public String toString() {
+		return "Overlay [mWOffset=" + mWOffset + ", mHOffset=" + mHOffset
+				+ ", mInput=" + mInput + ", mMulti=" + mMulti + "]";
+	}
 	
 }
