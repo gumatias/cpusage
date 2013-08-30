@@ -51,6 +51,7 @@ public class EncodingRequestParseTest {
 		assertNotNull(oEncodingRequest.getOutput().getSecret());
 		assertNotNull(oEncodingRequest.getOutput().getBucket());
 		assertNotNull(oEncodingRequest.getOutput().getObject());
+		assertNotNull(oEncodingRequest.getOutput().isPublic());
 		assertNotNull(oEncodingRequest.getTemplate());
 		
 		assertEquals("CUSTOMER_KEY", oEncodingRequest.getKey());
@@ -63,8 +64,8 @@ public class EncodingRequestParseTest {
 		assertEquals("AMAZON_SECRET", oEncodingRequest.getOutput().getSecret());
 		assertEquals("amazon_bucket_out", oEncodingRequest.getOutput().getBucket());
 		assertEquals("output_video.m4v", oEncodingRequest.getOutput().getObject());
+		assertEquals(Boolean.TRUE, oEncodingRequest.getOutput().isPublic());
 		assertEquals("ipod_small_widescreen", oEncodingRequest.getTemplate());
-		
 		
 		String oJson = mGson.toJson(oEncodingRequest);
 		assertNotNull(oJson);

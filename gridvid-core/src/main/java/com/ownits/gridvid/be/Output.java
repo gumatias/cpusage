@@ -25,7 +25,10 @@ public class Output {
 	
 	@SerializedName("object")
 	private String mObject;
-
+	
+	@SerializedName("set_public")
+	private Boolean mPublic;
+	
 	public String getKey() {
 		return mKey;
 	}
@@ -58,10 +61,19 @@ public class Output {
 		mObject = pObject;
 	}
 
+	public Boolean isPublic() {
+		return mPublic;
+	}
+
+	public void setPublic(Boolean pPublic) {
+		mPublic = pPublic;
+	}
+
 	@Override
 	public String toString() {
 		return "Output [mKey=" + mKey + ", mSecret=" + mSecret + ", mBucket="
-				+ mBucket + ", mObject=" + mObject + "]";
+				+ mBucket + ", mObject=" + mObject + ", mPublic=" + mPublic
+				+ "]";
 	}
 	
 }
