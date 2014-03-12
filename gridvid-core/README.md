@@ -1,3 +1,6 @@
+### Status
+[![Build Status](https://travis-ci.org/gumatias/cpusage.png?branch=master)](https://travis-ci.org/gumatias/cpusage)
+
 # CPUsage's Gridvid Core #
 
 This project was created to make developer's life easier by 
