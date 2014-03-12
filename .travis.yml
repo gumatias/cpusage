@@ -1,0 +1,2 @@
+before_install: cd gridvid-core
+language: java
